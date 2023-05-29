@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> String-Encryptor Alura </title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <h1 class="no-margin center">Encriptador</h1>  
+        </div>  
+    </header>
+
+    <main>
+        <div class="encriptador contenedor">
+            <section class="ingresarTexto">
+                <textarea class="ingresarTexto__texto" placeholder="Ingrese el texto aquí" required ></textarea>
+                <div>
+                    <h6 class="ingresarTexto__aviso no-margin"> ⭙ No escribir acentos o caracteres especiales </h6>
+                    <div class="ingresarTexto__botones">
+                        <button class="btn btn_encriptar">Encriptar</button>
+                        <button class="btn btn_desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="resultadoTexto">
+                <textarea class="resultadoTexto__texto" readonly></textarea>
+                <div class="resultadoTexto__botones">
+                        <button class="btn btn_copiar">Copiar Texto</button>
+                </div> 
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="redes">
+            <a class="icono-red" href="https://github.com/RochaDiego04"><img src="img/github.png" ></a>
+            <a class="icono-red" href="https://www.linkedin.com/in/diego-rocha-escamilla/"><img src="img/linkedin.png" ></a>   
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="EncriptadorAlura.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+:root{
+    --fuenteHeading: 'Bakbak One', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --primario: #FE428E;
+    --primarioOscuro: #431C36;
+    --secundario: #b6f2ed;
+    --blanco: #ffffff;
+    --gris: #dff1f6;
+    --negro: #000000;
+    --fondo: #141321;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    background-image: linear-gradient(var(--fondo), var(--negro));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  Globales    */
+.contenedor {
+    width: min(90%,110rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+}
+
+h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+textarea {
+    font-size: 2.6rem;
+    font-family: var(--fuenteParrafos);
+}
+
+/*  Utilidades  */
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+
+/*  Header  */
+.header {
+    height: 20rem;
+}
+
+.header h1 {
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .header h1 {
+        font-size: 5rem;
+    }
+}
+
+/* Botones */
+.btn {
+    font-family: var(--fuenteParrafos);
+    background-color: transparent;
+    color: var(--blanco);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-width: 1.5px;
+    border-color: var(--primario);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+@media (min-width: 768px) {
+    .btn{
+        display: inline-block;
+    }
+}
+
+.btn:hover {
+    background-color: var(--primarioOscuro);
+  }
+
+.btn:hover{
+    cursor: pointer;
+}
+
+
+
+/* Encriptador */
+.encriptador{
+    display: grid;
+    grid-template-columns: 1;
+}
+
+@media (min-width: 768px) {
+    .encriptador{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+/* Encriptador - Ingresar Texto */
+.ingresarTexto__texto {
+    width: 100%;
+    height: 40rem;
+    padding: 2rem;
+
+    background-color: transparent;
+    /* background-color: var(--primarioOscuro); */
+    color: var(--secundario);
+
+    border-radius: 5%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+@media (min-width: 768px) {
+    .ingresarTexto__texto {
+        padding-left: 4rem;
+    }
+}
+
+.ingresarTexto__texto::placeholder {
+    color: var(--gris);
+}
+
+.ingresarTexto__aviso {
+    font-size: 2rem;
+    color: var(--blanco);
+    padding: 2rem;
+    text-align: center;
+}
+
+.ingresarTexto__botones {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+} 
+
+.ingresarTexto__botones .btn_encriptar,
+.ingresarTexto__botones .btn_desencriptar{
+    font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    .ingresarTexto__botones {
+        display: flex;
+        justify-content: space-around;
+
+    } 
+    .ingresarTexto__botones .btn_encriptar,
+    .ingresarTexto__botones .btn_desencriptar{
+        font-size: 1.8rem;
+    }
+}
+
+/* Encriptador - Resultado Texto */
+.resultadoTexto {
+    text-align: center;
+}
+.resultadoTexto__texto {
+    width: 30rem;
+    height: 40rem;
+    padding: 2rem;
+    background-color: transparent;
+    box-shadow: 4px 4px 35px 3px var(--primario), 2px 2px 10px 1.5px var(--blanco);
+    /* background-color: var(--primarioOscuro); */
+    color: var(--secundario);
+
+    border-radius: 5%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+@media (min-width: 768px) {
+    .resultadoTexto__texto {
+        width: 100%;
+    }
+}
+
+.resultadoTexto__botones{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.resultadoTexto__botones .btn_copiar{
+    font-size: 1.4rem;
+}
+
+
+@media (min-width: 768px) {
+    .resultadoTexto__botones{
+        font-size: 1.8rem;
+    }
+    .resultadoTexto__botones .btn_copiar{
+        font-size: 1.8rem;
+    }
+}
+
+.btn_copiar {
+    margin-top: 4rem;
+}
+
+/*  ScrollBar   */
+
+
+
+/*  Footer   */
+footer {
+    background-color: var(--negro);
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    footer {
+        margin-top: 25rem;
+    }
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    height: 20rem;
+}
+
+.redes .icono-red img {
+    width: 10rem; 
+}
+
+.icono-red img {
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 55px 3px var(--primario);
+}
+
+
+
+
+
+
+
