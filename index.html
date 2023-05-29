@@ -7,11 +7,14 @@
     <title> String-Encryptor Alura </title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,17 +29,21 @@
             <section class="ingresarTexto">
                 <textarea class="ingresarTexto__texto" placeholder="Ingrese el texto aquí" required ></textarea>
                 <div>
-                    <h6 class="ingresarTexto__aviso no-margin"> ⭙ No escribir acentos o caracteres especiales </h6>
+                    <h6 class="ingresarTexto__aviso no-margin"><i class="fas fa-ban"></i> No escribir acentos o caracteres especiales </h6>
                     <div class="ingresarTexto__botones">
-                        <button class="btn btn_encriptar">Encriptar</button>
-                        <button class="btn btn_desencriptar">Desencriptar</button>
+                        <button class="btn btn_encriptar" onclick="encriptarTexto()">Encriptar</button>
+                        <button class="btn btn_desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
                     </div>
                 </div>
             </section>
             <section class="resultadoTexto">
                 <textarea class="resultadoTexto__texto" readonly></textarea>
                 <div class="resultadoTexto__botones">
-                        <button class="btn btn_copiar">Copiar Texto</button>
+                        <button class="btn btn_copiar" onclick="copiarTexto()">Copiar Texto</button>
+                        <div class="loading">
+                            <div class="d1"></div>
+                            <div class="d2"></div>
+                        </div>
                 </div> 
             </section>
         </div>
@@ -49,7 +56,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="EncriptadorAlura.js"></script>
+    <script type="text/javascript" src="javascript/scripts.js"></script>
 
 </body>
 
