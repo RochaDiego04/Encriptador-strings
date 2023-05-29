@@ -72,12 +72,16 @@ textarea {
 }
 
 .header h1 {
-    color: var(--primario);
+    background-image: linear-gradient(70deg, var(--primario) 0%, var(--secundario)  90%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 4px 2.5px 0 hsla(0, 0%, 0%, 0.107);
 }
 
 @media (min-width: 768px) {
     .header h1 {
         font-size: 5rem;
+        background-image: linear-gradient(70deg, var(--primario) 0%, var(--secundario)  70%);
     }
 }
 
@@ -111,6 +115,16 @@ textarea {
 .btn:hover{
     cursor: pointer;
 }
+
+/*  ScrollBar TextBox  */
+/* textarea::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: var(--primario);
+    border-radius: 0.5rem;
+} */
 
 
 /* Encriptador */
@@ -232,8 +246,6 @@ textarea {
 .btn_copiar {
     margin-top: 4rem;
 }
-
-/*  ScrollBar   */
 
 
 /*  Footer   */
