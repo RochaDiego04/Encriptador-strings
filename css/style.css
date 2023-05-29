@@ -213,8 +213,7 @@ textarea {
 
 .resultadoTexto__botones{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 2rem;
 }
 
@@ -269,59 +268,6 @@ footer {
     box-shadow: inset 4px 4px 55px 3px var(--primario);
 }
 
-
-/* LOADING ANIMATION */
-.loading {
-    display: none;
-    margin-top: 2.2rem;
-    width: 4rem;
-    height: 4rem;
-    position: relative;
-  }
-  
-  .d1 ,
-  .d2 {
-    border: .5rem solid #64dfdf;
-    border-radius: 5rem;
-  }
-  
-  .loading .d1 {
-    width: 3.5rem;
-    height: 3.5rem;
-    position: absolute;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    animation: load161 1s linear infinite;
-  }
-  
-  .loading .d2 {
-    width: 2rem;
-    height: 2rem;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    margin: 0.8rem;
-    animation: load2812 2s linear infinite;
-  }
-  
-  @keyframes load161 {
-    0% {
-      transform: rotate(0);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes load2812 {
-    0% {
-      transform: rotate(0);
-    }
-  
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
 
 
 
