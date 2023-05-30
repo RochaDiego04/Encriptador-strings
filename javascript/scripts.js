@@ -6,11 +6,22 @@ function verificarTexto() {
     }
 }
 
+function verificarTextoIngresado() {
+    let textarea = document.querySelector('.ingresarTexto__texto');
+    if (textarea.value.trim() !== '') {
+      return true;
+    }
+    return false;
+}
+
 function encriptarTexto() {
     if(verificarTexto() == false){
         return;
     }
-
+    if(verificarTextoIngresado() == false){
+        return;
+    }
+    mostrarBtnCopiar();
     let texto = document.querySelector('.ingresarTexto__texto').value;
     /* Encriptar texto */
     /* /g es una expresion regular para realizar una busqueda global*/
@@ -27,7 +38,9 @@ function desencriptarTexto() {
     if(verificarTexto() == false){
         return;
     }
-
+    if(verificarTextoIngresado() == false){
+        return;
+    }
     let texto = document.querySelector('.ingresarTexto__texto').value;
     /* Encriptar texto */
     let textoDesencriptado = texto.replace(/enter/g, 'e');
@@ -56,4 +69,7 @@ function copiarTexto() {
     }, 500);
   }
 
-  
+function mostrarBtnCopiar() {
+    const btnCopiar = document.querySelector(".btn_copiar");
+    btnCopiar.style.display = "inline-block";
+}
