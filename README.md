@@ -6,6 +6,10 @@
     <img src="https://img.shields.io/badge/CSS-01A3D8?logo=css3&logoColor=FFFFFF&style=for-the-badge" />
 </div>
 
+<div align="center">
+    <img alt="Imagen página principal" src="img/img_readme.JPG">
+</div>
+
 ## 📝 Descripción
 
 Este proyecto es una aplicación web que utiliza HTML, CSS y JavaScript para encriptar y desencriptar texto. La encriptación se realiza mediante la sustitución de ciertas letras por otras según un conjunto específico de reglas. La aplicación solo acepta letras minúsculas y no se permiten acentos ni caracteres especiales.
